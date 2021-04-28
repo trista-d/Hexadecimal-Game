@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+} // if
+
 let colorSample = document.getElementById("colorSample"); // the color sample element
 let codeContainer = document.getElementById("code"); //  container element for question in 'choosing between colors' mode
 let mark = document.getElementById("mark"); // container element for 'incorrect' and 'correct' messages
