@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hexadecimal Guessing Game</title>
+    
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+    
+    <!-- stop user from clicking question while it's being marked -->
+    <div id="blockClicks"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <span class="navbar-brand">Hexadecimal&nbsp;&nbsp;<i class="fas fa-hexagon"></i>&nbsp;&nbsp;Guessing</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      
+      
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mode
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="javascript:switchMode(-1)">Guess between codes</a>
+          <a class="dropdown-item" href="javascript:switchMode(-2)">Guess between colors</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Difficulty
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="javascript:resetGame(2)">Easy</a>
+          <a class="dropdown-item" href="javascript:resetGame(4)">Normal</a>
+          <a class="dropdown-item" href="javascript:resetGame(8)">Hard</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+        <div class="navbar-brand">Score: <span id="score">0 / 0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</nav>
+    
+        <h1 class="display-4">What colour is this?</h1>
+        
+        <div id="sample-container">
+          <span id="mark" class="font-weight-bold"></span>
+          <span id="code"></span>
+          <span id="endgame"></span>
+          <svg viewbox="0 0 300 300" preserveaspectratio="xMidYMin">
+              <path id="colorSample" d="M38,2 L82,2 
+             A12,12 0 0,1 94,10 
+             L112,44 
+             A12,12 0 0,1 112,56
+             L94,90       
+             A12,12 0 0,1 82,98
+             L38,98
+             A12,12 0 0,1 26,90
+             L8,56
+             A12,12 0 0,1 8,44
+             L26,10
+             A12,12 0 0,1 38,2" />
+          </svg>
+    </div>
+    <div id="grid">
+      <div id="answer-container"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+body {
+  font-family: helvetica, arial, sans-serif; /* fallback font if bootstrap doesn't work*/
+  user-select: none;
+  overflow: hidden;
+}
+
+:root {
+ --screenWidth = 100vw; 
+ --screenHeight = 100vh;
+}
+
+@media screen and (max-width:900px) {
+  
+  #answer-container {
+    grid-template-columns: auto auto !important;
+  }
+  
+  .answer {
+    margin-bottom: 20%;
+  }
+}
+
+nav {
+  margin-right: -3% !important;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#sample-container {
+  position: relative;
+  left: 30%;
+  text-align: center;
+}
+
+.answer {
+  position: relative;
+  font-size: 2vw !important;
+  text-align: center;
+  margin-top: 10%;
+  width: 105%;
+}
+
+.answer:hover {
+  filter: brightness(0.8);
+}
+
+#mark {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 12%;
+  left: 9.5%;
+  padding: 2% 2%;
+  border-radius: 10%;
+  display: none;
+  font-size: 4vw;
+  text-align: center;
+}
+
+#endgame {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 12%;
+  left: 6%;
+  padding: 1% 1%;
+  border-radius: 10%;
+  display: none;
+  font-size: 2vw;
+  text-align: center;
+}
+
+#code {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 9%;
+  left: 13%;
+  display: none;
+  font-size: 4vw;
+  text-align: center;
+}
+
+#answer-container {
+  display: grid;
+  align-items: center;
+  gap: 5% 50%;
+  grid-template-columns: auto auto auto auto;
+}
+
+
+#grid {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  left: 45%;
+  transform: translate(-50%);
+  
+}
+
+#blockClicks {
+  position: absolute;
+  width: var(--screenWidth);
+  height: var(--screenHeight);
+  display: none;
+  z-index: 10;
+}
