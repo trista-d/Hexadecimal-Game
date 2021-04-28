@@ -29,6 +29,12 @@
       "src": "images/icons/hex384.png",
       "sizes": "384x384", 
 	  "purpose": "maskable"
+    },
+  
+{
+      "src": "images/icons/hex144.png",
+      "sizes": "144x144", 
+	  "purpose": "maskable"
     }
  
   ]
