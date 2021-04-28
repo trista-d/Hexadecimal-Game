@@ -1,9 +1,9 @@
 {
 "theme_color" : "#fff",
 "background_color" : "#fff",
-"display" : "browser",
-"scope" : "/index.html",
-"start_url" : "/index.html",
+"display" : "standalone",
+"scope" : "/",
+"start_url" : "/",
 "name" : "Hexadecimal Guessing Game",
 "short_name" : "Hex Guess",
 "description" : "Guess the hexadecimal code for the color and vice versa",
