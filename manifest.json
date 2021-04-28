@@ -34,7 +34,7 @@
   {
       "src": "images/icons/hex144.png",
       "sizes": "144x144", 
-      "purpose": "maskable"
+      "purpose": "any"
   }
  
   ]
