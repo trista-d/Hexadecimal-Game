@@ -8,25 +8,31 @@
     <title>Hexadecimal Guessing Game</title>
     
     <link rel="manifest" href="manifest.json" />
-
+    <link rel="shortcut icon" type="image/png" href="images/icons/hex144.png"/>
+    
+    <meta name="description" content="Hex game for wev dev 12">
+    
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     
+    <meta name="theme-color" content="#FFFFFF"/>
+    <link rel="apple-touch-icon" href="images/icons/hex144.png">
+    
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-    <!-- font awesome icons -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous" defer></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
+   <!-- this css is deferred (like scripts can be deferred) to improve performance -->
+   <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
   </head>
+ 
   <body>
     
     <!-- stop user from clicking question while it's being marked -->
     <div id="blockClicks"></div>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <span class="navbar-brand">Hexadecimal&nbsp;&nbsp;<i class="fas fa-hexagon"></i>&nbsp;&nbsp;Guessing</span>
+  <span class="navbar-brand">Hexadecimal&nbsp;&nbsp;<i class="bi bi-hexagon"></i>&nbsp;&nbsp;Guessing</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
