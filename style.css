@@ -1,3 +1,7 @@
+html { 
+  overflow: auto; 
+}
+
 body {
   font-family: helvetica, arial, sans-serif; /* fallback font if bootstrap doesn't work*/
   user-select: none;
@@ -5,8 +9,8 @@ body {
 }
 
 :root {
- --screenWidth = 100vw; 
- --screenHeight = 100vh;
+ --screenWidth = 100%; 
+ --screenHeight = 100%;
 }
 
 @media screen and (max-width:900px) {
@@ -100,8 +104,9 @@ h1 {
 
 #blockClicks {
   position: absolute;
-  width: var(--screenWidth);
+  width: 100%;
   height: var(--screenHeight);
   display: none;
   z-index: 10;
+  border: thick solid red;
 }
