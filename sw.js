@@ -7,7 +7,7 @@ self.addEventListener('install', function(event) {
         '/',
         'index.html',
         'style.css',
-        '/script.js',
+        'script.js',
       ]);
     })
   );
@@ -31,7 +31,7 @@ self.addEventListener('fetch', function(event) {
         });
         return response;
       }).catch(function () {
-        return caches.match('/notfound.txt');
+        return caches.match('');
       });
     }
   }));
